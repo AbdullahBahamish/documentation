@@ -182,6 +182,24 @@ Lastly, enter the :guilabel:`Price` rate.
    .. image:: products/example-rental-prices-tab.png
       :alt: Sample of a rental product's Price tab.
 
+.. _rental/products/ecommerce:
+
+eCommerce features
+------------------
+
+.. important::
+   This tab is only available if the **Website** app and :guilabel:`eCommerce` module is installed.
+
+The :guilabel:`eCommerce` tab configures the product page on the website. Refer to the :ref:`Product
+visibility <ecommerce/products/publish-products>` and :ref:`Product configuration
+<ecommerce/products/product-configuration>` sections for the **eCommerce** module for configuration
+instructions.
+
+Refer to the *Availabilities* setting in the :ref:`Rental app's settings
+<rental/product_type/configuration>` to set what days and business hours of the week customers can
+book or return rental products online at a company level. If the product isn't published to the
+website then the setting does not go into effect.
+
 .. _rental/products/product-tracking:
 
 Configure product tracking

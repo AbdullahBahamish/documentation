@@ -1,6 +1,6 @@
 .. meta::
    :description: This document explains how to pick up and return rental Goods (physical products)
-    and Services.
+                 and Services.
 
 .. _create-rental-order-tutorial: https://youtu.be/hpQHu6U_IKk?si=rMPUwL2IkE_ItlZz
 
@@ -11,7 +11,7 @@ Pick up and return rental products
 ==================================
 
 This document focuses on the pickup and return of both rental *Goods* (physical products) such as
-clothes, computer equipment, and bicycles, and *Services* (physical and non-physical) such as
+clothes, computer equipment, bicycles, and *Services* (physical and non-physical) such as
 photographer sessions, hotel rooms, and catering. Refer to the
 :doc:`../configure_products/product_type` page for more information on *Goods* and *Services*.
 
@@ -50,15 +50,22 @@ Configuration for service rental products, both physical and non-physical, requi
 materials and roles <rental/service_products/materials-and-roles>` in the **Planning** app before
 creating the product.
 
-Non-physical service products also require the **Timesheets** app to accurately track services that
-use time-based pricing rates. For non-physical service products, :ref:`configure employee roles
-<rental/labor_service_products/configure-employee-roles>` in the **Planning** app before creating
-the product.
+Non-physical service products also require the **Timesheets** app to track services that use
+time-based pricing rates accurately. For non-physical service products, :ref:`configure employee
+roles <rental/labor_service_products/configure-employee-roles>` in the **Planning** app before
+creating the product.
 
-If the business wants to sell service rental products on an online shop, the **Website** app and the
-**eCommerce** module must be installed. To configure the pickup and return availability of rental
-products in the eCommerce store, refer to the :ref:`rental/pickup_return/ecommerce-products`
-section.
+.. _rental/pickup_return/ecommerce-products:
+
+Configure pick up and return availability for eCommerce products
+================================================================
+
+The **Rental** app supports eCommerce configuration at :ref:`a company
+<rental/product_type/configuration>` and product level when the **Website** app and the
+**eCommerce** module are installed. Using the *Availabilities* setting restricts the days and time
+the company allows pickup and returns to be scheduled through the online store. To configure the
+rental product page in the online store, refer to the :ref:`Product configuration
+<ecommerce/products/product-configuration>` section for the **eCommerce** module.
 
 .. _rental/pickup_return/pickup:
 
@@ -70,17 +77,17 @@ Pick up a rental product
    meeting rooms, and storage spaces, the pickup (check-in) and return (check-out) processes are the
    same.
 
-To process a pickup of a rental product, go to :menuselection:`Rental app --> Orders --> Orders` and
-select the desired rental order. Click :guilabel:`Pickup`, and a *Validate a pickup* pop-up window
-displays, listing the reserved rental product and quantity in :guilabel:`Product`,
-:guilabel:`Reserved`, and :guilabel:`Picked-up` columns.
+To process a pickup of a rental product, go to :menuselection:`Rental app --> Orders` and select the
+desired rental order. Click :guilabel:`Pickup`, and a *Validate a pickup* pop-up window displays,
+listing the reserved rental product and quantity in :guilabel:`Product`, :guilabel:`Reserved`, and
+:guilabel:`Picked-up` columns.
 
 .. image:: pickup_return/validate-a-pickup-window.png
    :alt: Example of a Validate a pickup page in the Rental app.
 
 To confirm the list, click :guilabel:`Validate`. The action updates the rental order with a
 :guilabel:`Picked-up` badge and updates the :guilabel:`Delivered` column. The action is also
-recorded in the rental order's chatter.
+recorded in the rental order’s Chat.
 
 .. image:: pickup_return/rental-order-picked-up-badge.png
    :alt: Example of a rental order once the rental product is picked up in the Rental app.
@@ -96,18 +103,18 @@ Pick up a physical rental product with tracking enabled
    form.
 
 To process a pickup of a physical rental product with tracking enabled, go to :menuselection:`Rental
-app --> Orders --> Orders` and select the desired rental order. Click :guilabel:`Pickup`, and the
-*Validate a pickup* pop-up window displays, listing the reserved rental product and quantity in
+app --> Orders` and select the desired rental order. Click :guilabel:`Pickup`, and the *Validate a
+pickup* pop-up window displays, listing the reserved rental product and quantity in
 :guilabel:`Product`, :guilabel:`Reserved`, :guilabel:`Serial Numbers`, and :guilabel:`Picked-up`
-columns. Check the rental product's serial number and then click in the :guilabel:`Serial Numbers`
-column and select the product's serial number from the drop-down list.
+columns. Check the rental product’s serial number and then click in the :guilabel:`Serial Numbers`
+column and select the product’s serial number from the drop-down list.
 
-.. image:: pickup_return/validate-a-pickup-with-serial-numbers.png
+.. image:: pickup_return/validate-pickup-with-serial-numbers.png
    :alt: Example of a Validate a pickup page with product tracking enabled in the Rental app.
 
 To confirm the list, click :guilabel:`Validate`. The action updates the rental order with a
 :guilabel:`Picked-up` badge and updates the :guilabel:`Delivered` column. The action is also
-recorded in the rental order's chatter.
+recorded in the rental order’s Chat.
 
 .. image:: pickup_return/rental-order-picked-up-badge-with-tracking.png
    :alt: Example of a rental order with a Picked-up badge in the Rental app.
@@ -125,7 +132,7 @@ When a physical rental product is rented alongside a service, it is advised to p
 entering time on the associated task (if applicable).
 
 If time is entered on the *Timesheets* tab of an associated task before the physical rental product
-is picked up, the rental order automatically displays a :guilabel:`Picked-up` badge; however, the
+is picked up, the rental order automatically displays a :guilabel:`Picked-up` badge, however the
 :guilabel:`Pickup` button remains available on the rental order.
 
 .. _rental/pickup_return/return:
@@ -138,9 +145,9 @@ Return a rental product
    both must be returned on the rental order. Returning a rental service is the same process as
    returning a physical rental product without tracking enabled.
 
-When a customer returns the rental product, go to :menuselection:`Rental app --> Orders --> Orders`
-and select the desired rental order. Click :guilabel:`Return`, and the *Validate a return* pop-up
-window displays, listing the returning rental product and quantity in :guilabel:`Product`,
+When a customer returns the rental product, go to :menuselection:`Rental app --> Orders` and select
+the desired rental order. Click :guilabel:`Return`, and the *Validate a return* pop-up window
+displays, listing the returning rental product and quantity in :guilabel:`Product`,
 :guilabel:`Picked-up`, and :guilabel:`Returned` columns.
 
 .. image:: pickup_return/validate-a-return-window.png
@@ -148,7 +155,7 @@ window displays, listing the returning rental product and quantity in :guilabel:
 
 To confirm the list, click :guilabel:`Validate`. The action applies a :guilabel:`Returned` badge to
 the rental order and updates the :guilabel:`Returned` column. The action is also recorded in the
-rental order's chatter.
+rental order’s Chat.
 
 .. image:: pickup_return/rental-order-returned-badge.png
    :alt: Example of the rental order once the rental product is returned in the Rental app.
@@ -158,21 +165,21 @@ rental order's chatter.
 Return a physical rental product with tracking enabled
 ------------------------------------------------------
 
-When a customer returns the product, go to :menuselection:`Rental app --> Orders --> Orders` and
-select the desired rental order. Click :guilabel:`Return`, and the *Validate a return* pop-up window
-displays, listing the returning rental product and quantity in :guilabel:`Product`,
-:guilabel:`Picked-up`, :guilabel:`Serial Numbers`, and :guilabel:`Returned` columns.
+When a customer returns the product, go to :menuselection:`Rental app --> Orders` and select the
+desired rental order. Click :guilabel:`Return`, and the *Validate a return* pop-up window displays,
+listing the returning rental product and quantity in :guilabel:`Product`, :guilabel:`Picked-up`,
+:guilabel:`Serial Numbers`, and :guilabel:`Returned` columns.
 
 .. image:: pickup_return/validate-a-return-window-with-serial-numbers.png
    :alt: Example of a Validate a return page with product tracking enabled in the Rental app.
 
 Verify that the returned rental product has the same serial number as the one listed in the
-:guilabel:`Serial Numbers` column. If the serial numbers don't match, click into the
+:guilabel:`Serial Numbers` column. If the serial numbers don’t match, click into the
 :guilabel:`Serial Numbers` column and select the correct serial number from the drop-down menu.
 
 Once the rental product's quantity and serial number match, click :guilabel:`Validate`. The action
 applies a :guilabel:`Returned` badge to the rental order and updates the :guilabel:`Returned`
-column. The action is also recorded in the rental order's chatter.
+column. The action is also recorded in the rental order’s Chat.
 
 .. image:: pickup_return/rental-order-with-returned-badge-with-tracking.png
    :alt: Example of a rental order with a Returned badge in the Rental app.
@@ -191,38 +198,10 @@ To create pickup and return receipts, navigate to the desired rental order and c
 .. image:: pickup_return/print-pickup-and-return-receipt-menus.png
    :alt: The pickup and return receipt print option in the Odoo Rental application.
 
-From this drop-down menu, select :icon:`fa-print` :menuselection:`Print --> Pickup and Return
-Receipt`.
+From this drop-down menu, hover over the :icon:`fa-print` :guilabel:`Print` option to reveal a
+sub-menu. Then select :guilabel:`Pickup and Return Receipt`.
 
 Odoo downloads a PDF detailing all information about the current status of the rented items.
-
-.. _rental/pickup_return/ecommerce-products:
-
-Configure pickup and return availability for eCommerce products
-===============================================================
-
-The Rental app supports eCommerce configuration at the app and product level when the **Website**
-app and the **eCommerce** module are installed. Using the *Unavailability days* setting restricts
-the days the rental website allows pickups and returns to be scheduled. To configure the rental
-product page in the online store, refer to the :ref:`Product configuration
-<ecommerce/products/product-configuration>` section for the eCommerce module.
-
-.. _rental/pickup_return/configuration-ecommerce:
-
-Configuration
--------------
-
-To configure default settings for pickup and return availability of rental products in eCommerce
-store, navigate to :menuselection:`Rental app --> Configuration --> Settings`.
-
-In the *Pickup & Returns* section, the :guilabel:`Unavailability days` setting lists checkboxes for
-every day of the week. Selecting a day prevents scheduling rental pickups and returns through the
-online rental product page.
-
-.. image:: pickup_return/unavailability-days-setting.png
-   :alt: Example of the Unavailability days setting on the Setting page of the Rental app.
-
-Once the new work calendar is configured, click :guilabel:`Save`.
 
 .. seealso::
    - :doc:`create_rental_order`
@@ -232,3 +211,4 @@ Once the new work calendar is configured, click :guilabel:`Save`.
    - :doc:`../configure_products/labor_service_products`
    - `Tutorial: Create a rental order <create-rental-order-tutorial_>`_
    - `Tutorial: Hotel booking | Odoo rental <hotel-booking-tutorial_>`_
+
