@@ -1,3 +1,9 @@
+.. meta::
+   :description: This page explains the Goods and Services product types available in the Rental app
+                 and their configuration settings, app integrations, and search options. It also
+                 covers rental periods, including the default Nightly period with check-in and
+                 check-out fields.
+
 .. _configure-rental-product: https://youtu.be/CE-SahTUC9A?si=Gae5tLAZk6wt70TW
 
 ===================
@@ -18,10 +24,10 @@ work station, or storage unit.
 The following sections detail basic settings and app integration configurations for Goods and
 Services.
 
-.. _rental/product_type/settings:
+.. _rental/product_type/configuration:
 
-Settings
-========
+Configuration
+=============
 
 .. important::
    For the :guilabel:`Default Padding time` and :guilabel:`Rental Transfers` settings, the
@@ -62,6 +68,8 @@ for a rental product. This feature also needs the **Inventory** app to be instal
    Customer/Rental upon rental, and back upon return). **Do not** modify this location to avoid
    corrupting inventory tracking.
 
+.. _rental/product_type/ecommerce-settings:
+
 If the **eCommerce** module is installed, the *Rent Online* section is available to configure. The
 *Minimal time of rental* section contains:
 
@@ -71,6 +79,8 @@ If the **eCommerce** module is installed, the *Rent Online* section is available
   or returns.
 
 Click :guilabel:`Save` to apply the changes.
+
+.. _rental/product_type/app-integration:
 
 App integration configuration
 =============================
