@@ -49,15 +49,14 @@ Two-factor authentication setup
 ===============================
 
 After selecting an authenticator, log in to Odoo, then click the profile avatar in the upper-right
-corner, and select :guilabel:`My Profile` from the resulting drop-down menu.
+corner, and select :guilabel:`My Preferences` from the resulting drop-down menu.
 
-Click the :guilabel:`Account Security` tab, then slide the :guilabel:`Two-Factor Authentication`
-toggle to *active*.
+Click the :guilabel:`Security` tab, then click :guilabel:`Enabled 2FA`.
 
 .. image:: 2fa/account-security.png
    :alt: The account secuirty tab in a user profile.
 
-This generates a :guilabel:`Security Control` pop-up window that requires password confirmation to
+This generates a :guilabel:`Access Control` pop-up window that requires password confirmation to
 continue. Enter the appropriate password, then click :guilabel:`Confirm Password`. Next, a
 :guilabel:`Two-Factor Authentication Activation` pop-up window appears, with a |QR|.
 
